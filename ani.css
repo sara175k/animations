@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#scene {
+    width: 100vw;
+    height: 56.25vw;
+    position: relative;
+
+}
+
+
+#background {
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url(background.svg);
+    background-size: 100%, 100%;
+
+}
+
+
+#middleground {
+     width: 107.6vw;
+    height: 32vw;
+    background-image: url(middleground.svg);
+    background-size: 100%, 100%;
+    position: absolute;
+    top: 21.8vw;
+    left: -2vw;
+}
+
+
+
+#foreground{
+    width: 110.2vw;
+    height: 12.6vw;
+    background-image: url(foreground.svg);
+    position: absolute;
+    top: 47vw;
+
+}
+
+
+
+#clouds{
+    width: 89.8vw;
+    height: 12.5vw;
+    background-image: url(clouds.svg);
+    background-size:100%;
+    position: absolute;
+    top: 2vw;
+    left: 90vw;
+    animation-name: clouds;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+
+
+@keyframes clouds{
+    from{
+
+        left: 90vw;
+
+    }
+
+    to{
+
+        left: -90vw;
+
+    }
+
+}
+
+#owner{
+    background-image: url(owner.svg);
+    position: absolute;
+    width: 17.25vw;
+    height: 12.37vw;
+    background-size: 100%;
+    top:30vw;
+    left:80vw;
+    animation-name: owner;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes owner{
+    from{
+        left:85vw;
+    }
+    to{
+        left: -80vw;
+    }
+}
+
+
