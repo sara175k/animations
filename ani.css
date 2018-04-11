@@ -5,8 +5,9 @@ body{
 
 #scene {
     width: 100vw;
-    height: 56.25vw;
-    position: relative;
+    height: 100vw;
+    position: absolute;
+    overflow:hidden;
 
 }
 
@@ -14,22 +15,22 @@ body{
 #background {
 
     width: 100%;
-    height: 100%;
+    height: 50%;
 
     background-image: url(background.svg);
-    background-size: 100%, 100%;
+    background-size: 100%, 50%;
 
 }
 
 
 #middleground {
-     width: 107.6vw;
-    height: 32vw;
+    width: 100.06vw;
+    height: 26vw;
     background-image: url(middleground.svg);
     background-size: 100%, 100%;
     position: absolute;
-    top: 21.8vw;
-    left: -2vw;
+    top: 24vw;
+    left: -0vw;
 }
 
 
@@ -39,8 +40,7 @@ body{
     height: 12.6vw;
     background-image: url(foreground.svg);
     position: absolute;
-    top: 47vw;
-
+    top: 42vw;
 }
 
 
@@ -75,26 +75,47 @@ body{
 
 }
 
-#owner{
-    background-image: url(owner.svg);
+#dog{
+    background-image: url(dog.svg);
     position: absolute;
-    width: 17.25vw;
-    height: 12.37vw;
+    width: 6.68vw;
+    height: 5.18vw;
     background-size: 100%;
-    top:30vw;
-    left:80vw;
-    animation-name: owner;
-    animation-duration: 5s;
+    top: 35vw;
+    left:85vw;
+    animation-name: dog;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
 }
 
-@keyframes owner{
+@keyframes dog{
     from{
         left:85vw;
     }
     to{
-        left: -80vw;
+        left: 65vw;
     }
 }
 
+#cat{
+    background-image: url(cat.svg);
+    position: absolute;
+    width: 5.25vw;
+    height: 3.0625vw;
+    background-size: 100%;
+    top: 39vw;
+    left: 30vw;
+    animation-name: cat;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cat{
+    from{
+        left:30vw ;
+    }
+    to{
+        left:52vw ;
+    }
+}
 
