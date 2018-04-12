@@ -54,7 +54,7 @@ body{
     top: 2vw;
     left: 90vw;
     animation-name: clouds;
-    animation-duration: 10s;
+    animation-duration: 50s;
     animation-iteration-count: infinite;
 
 }
@@ -75,47 +75,115 @@ body{
 
 }
 
-#dog{
-    background-image: url(dog.svg);
+#dog_sprite{
+    background-image: url(real_dog.svg);
     position: absolute;
-    width: 6.68vw;
-    height: 5.18vw;
-    background-size: 100%;
-    top: 35vw;
-    left:85vw;
-    animation-name: dog;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
+    width: 50vw;
+    height: 60vw;
+    background-size: 300% 100%;
+    top: 9vw;
+    left:80vw;
+
 }
 
-@keyframes dog{
-    from{
+#dog_container{
+    position: absolute;
+}
+
+.dog_move{
+    animation-name: dog_move_kf;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(8);
+    animation-fill-mode: forwards;
+}
+
+@keyframes dog_move_kf;{
+    0%{
         left:85vw;
     }
-    to{
+    100%{
         left: 65vw;
     }
 }
 
-#cat{
-    background-image: url(cat.svg);
-    position: absolute;
-    width: 5.25vw;
-    height: 3.0625vw;
-    background-size: 100%;
-    top: 39vw;
-    left: 30vw;
-    animation-name: cat;
-    animation-duration: 15s;
+.dog_walk{
+    animation-name: dog_walk_kf;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+    animation-fill-mode: forwards;
 }
 
-@keyframes cat{
-    from{
-        left:30vw ;
+@keyframes dog_walk_kf{
+    0{
+        background-position: 500% 200%;
     }
-    to{
-        left:52vw ;
+    100{
+        background-position: 80% 100%
     }
 }
 
+#cat_sprite{
+    background-image: url(walk_cat.svg);
+    position: absolute;
+    width: 20vw;
+    height: 4.06vw;
+    background-size: 800% 100%;
+
+    top: 38vw;
+    left:0vw;
+
+
+}
+
+#cat_container {
+
+    position: absolute;
+}
+
+/* kat bevæger sig */
+
+.cat_move {
+    animation-name: cat_move_kf;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(8);
+    animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes cat_move_kf{
+    to {
+        left: 20vw;
+}
+    from {
+        left: 100vw;
+    }
+}
+
+/* kat går */
+.cat_walk {
+
+    animation-name: cat_walk_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(8);
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes cat_walk_kf{
+
+    0% {
+        background-position: 500 0;
+
+    }
+
+    100% {
+        background-position: -800% 0%;
+    }
+}

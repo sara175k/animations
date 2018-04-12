@@ -6,20 +6,34 @@
     <link rel="stylesheet" href="ani.css" type="text/css">
     </head>
 
+
     <body>
+
+<button id="start">start</button>
+<button id="hund">hund</button>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="ani.js"></script>
 
 
     <div id="scene">
         <div id="background"></div>
         <div id="middleground"></div>
-        <div id="dog"></div>
-        <div id="cat"></div>
-        <div id="foreground"></div>
-        <div id="clouds"></div>
+
+        <div id="container_dog" class="dog_move">
+        <div id="dog_sprite" class="dog_walk"></div>
         </div>
 
 
+        <div id="container_cat" class="cat_move">
+        <div id="cat_sprite" class="cat_walk"></div>
+        </div>
 
+        <div id="foreground"></div>
+        <div id="clouds"></div>
+        </div>
 
     </body>
 </html>
